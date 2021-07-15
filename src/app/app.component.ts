@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'odds-and-evens-game';
+  odds:number[] = [];
+  evens: number[] = [];
+
+  onIntervalFired(firedNumber: number) {
+    console.log(firedNumber);
+    if (firedNumber % 2 === 0) {
+      this.evens.push(firedNumber);
+    } else {
+      this.odds.push(firedNumber);
+    }
+  }
 }
